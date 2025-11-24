@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { X, BarChart3, MessageSquare, Ticket, Users, TrendingUp } from 'lucide-react';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
 interface AdminDashboardProps {
   onClose: () => void;
   onNavigate: (view: 'dashboard' | 'sessions') => void;
@@ -46,21 +48,21 @@ export default function AdminDashboard({ onClose, onNavigate }: AdminDashboardPr
 
         // Fetch all metrics in parallel from existing endpoints
         const [agentSessionsRes, feedbackRes, ticketsRes] = await Promise.all([
-          fetch('http://localhost:5000/api/agent-sessions/admin/stats', {
+          fetch(`${API_URL}/agent-sessions/admin/stats`, {
             credentials: 'include',
             headers: {
               'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json',
             },
           }),
-          fetch('http://localhost:5000/api/feedback/stats', {
+          fetch(`${API_URL}/feedback/stats`, {
             credentials: 'include',
             headers: {
               'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json',
             },
           }),
-          fetch('http://localhost:5000/api/tickets/admin/stats', {
+          fetch(`${API_URL}/tickets/admin/stats`, {
             credentials: 'include',
             headers: {
               'Authorization': `Bearer ${token}`,
