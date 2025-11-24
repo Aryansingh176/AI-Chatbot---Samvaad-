@@ -1,0 +1,453 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Typography variables */
+    --base-font-size: 16px;
+    --base-font: 16px;
+    --h1-scale: 3.5;
+    --h2-scale: 2.5;
+    --h3-scale: 1.75;
+    --h4-scale: 1.25;
+    --line-height: 1.62;
+    --heading-line-height: 1.2;
+    
+    /* Design tokens */
+    --radius: 10px;
+    --card-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+    --elev-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: var(--base-font-size);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-size: var(--base-font);
+    line-height: var(--line-height);
+    color: #1f2937; /* Improved contrast - gray-800 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Improved typography hierarchy with responsive scaling */
+  h1 {
+    font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #111827; /* Improved contrast - gray-900 */
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: clamp(1.2rem, 1.6vw + 0.8rem, 1.5rem);
+    font-weight: 700;
+    line-height: var(--heading-line-height);
+    letter-spacing: -0.01em;
+    color: #111827; /* Improved contrast - gray-900 */
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, calc(var(--base-font-size) * var(--h3-scale)), 2rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    color: #111827; /* Improved contrast - gray-900 */
+  }
+
+  h4 {
+    font-size: clamp(1.125rem, calc(var(--base-font-size) * var(--h4-scale)), 1.5rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111827; /* Improved contrast - gray-900 */
+  }
+
+  p {
+    line-height: var(--line-height);
+    color: #374151; /* Improved contrast - gray-700 */
+  }
+
+  /* Accessibility: Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only.focus:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Focus-visible styles for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid rgba(100, 150, 255, 0.12);
+    outline-offset: 2px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid rgba(100, 150, 255, 0.12);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Container utility */
+  .container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Card component with consistent styling */
+  .card {
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 1rem;
+    background: inherit;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--elev-shadow);
+  }
+
+  /* Feature and FAQ card styling */
+  .feature-card {
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 160ms ease;
+    position: relative;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Responsive grid for feature cards */
+  .feature-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .feature-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Button component with enhanced styling */
+  .btn {
+    border-radius: 12px;
+    padding: 0.6rem 1.05rem;
+    min-height: 44px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+
+  .btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .btn:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  /* Enhanced input and textarea styling */
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea {
+    border-radius: 10px;
+    padding: 0.75rem 1rem; /* Increased to meet 44px minimum tap target */
+    min-height: 44px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 160ms ease;
+    outline: none;
+  }
+
+  input:focus:not([type="checkbox"]):not([type="radio"]),
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+
+  input:hover:not(:focus):not([type="checkbox"]):not([type="radio"]),
+  textarea:hover:not(:focus) {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  input:disabled:not([type="checkbox"]):not([type="radio"]),
+  textarea:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f3f4f6;
+    box-shadow: none;
+  }
+
+  /* Chat widget polish */
+  .chat-window {
+    border-radius: 12px;
+    box-shadow: 0 8px 26px rgba(2, 6, 23, 0.08);
+    overflow: hidden;
+  }
+
+  .msg-bubble {
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+  }
+
+  .msg-bubble.user {
+    background: rgba(59, 130, 246, 0.1);
+    align-self: flex-end;
+  }
+
+  .msg-bubble.bot {
+    background: rgba(107, 114, 128, 0.08);
+    align-self: flex-start;
+  }
+
+  /* Section spacing with responsive padding */
+  section {
+    @apply py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 xl:px-10;
+  }
+
+  /* Container spacing */
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Mobile responsive utilities */
+  @media (max-width: 768px) {
+    /* Reduce horizontal padding on mobile */
+    .container {
+      padding: 1rem;
+    }
+
+    section {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Stack grid layouts */
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Adjust card padding on mobile */
+    .card {
+      padding: 0.85rem;
+    }
+
+    /* Hide decorative floats on mobile */
+    .animate-float {
+      display: none;
+    }
+
+    /* Increase button tap targets */
+    button, a.btn, .btn {
+      min-height: 48px;
+      padding: 0.875rem 1.25rem;
+    }
+
+    /* Larger input fields for mobile */
+    input:not([type="checkbox"]):not([type="radio"]),
+    textarea {
+      min-height: 48px;
+      padding: 0.875rem 1rem;
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* New micro-interaction: fade-up */
+  .fade-up {
+    animation: fadeUp 200ms ease-out forwards;
+  }
+
+  /* Hover scale for cards */
+  .hover-scale {
+    transition: transform 200ms ease-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Button ripple effect */
+  .btn-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease-out, height 0.4s ease-out;
+  }
+
+  .btn-ripple:active::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Box shadow utilities */
+  .shadow-subtle {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-subtle:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Rounded corners */
+  .rounded-card {
+    border-radius: 8px;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.15s ease-in-out;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .mobile-stack {
+      @apply flex-col;
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-float,
+    .fade-up,
+    .hover-scale,
+    .btn-ripple::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .hover-scale:hover {
+      transform: none !important;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

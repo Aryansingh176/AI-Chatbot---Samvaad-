@@ -1,0 +1,225 @@
+{
+  "categories": [
+    {
+      "id": "orders",
+      "name": "Orders",
+      "icon": "ShoppingBag",
+      "color": "blue"
+    },
+    {
+      "id": "payments",
+      "name": "Payments",
+      "icon": "CreditCard",
+      "color": "green"
+    },
+    {
+      "id": "refunds",
+      "name": "Refunds",
+      "icon": "RefreshCw",
+      "color": "purple"
+    },
+    {
+      "id": "account",
+      "name": "Account",
+      "icon": "User",
+      "color": "orange"
+    },
+    {
+      "id": "delivery",
+      "name": "Delivery",
+      "icon": "Truck",
+      "color": "indigo"
+    },
+    {
+      "id": "support",
+      "name": "Support",
+      "icon": "MessageCircle",
+      "color": "pink"
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How do I track my order?",
+      "answer": "You can track your order by logging into your account and visiting the 'My Orders' section. Click on the order you want to track, and you'll see real-time updates on its status and estimated delivery date.",
+      "category": "orders",
+      "language": "en"
+    },
+    {
+      "id": 2,
+      "question": "Can I modify my order after placing it?",
+      "answer": "Orders can be modified within 30 minutes of placement. Go to 'My Orders', select the order, and click 'Modify Order'. After this window, please contact our support team for assistance.",
+      "category": "orders",
+      "language": "en"
+    },
+    {
+      "id": 3,
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards (Visa, MasterCard, American Express), debit cards, PayPal, Google Pay, Apple Pay, and bank transfers. All transactions are secured with 256-bit SSL encryption.",
+      "category": "payments",
+      "language": "en"
+    },
+    {
+      "id": 4,
+      "question": "Is my payment information secure?",
+      "answer": "Absolutely. We use industry-standard encryption and comply with PCI DSS standards. Your payment information is never stored on our servers and is processed through secure payment gateways.",
+      "category": "payments",
+      "language": "en"
+    },
+    {
+      "id": 5,
+      "question": "How do I request a refund?",
+      "answer": "To request a refund, go to 'My Orders', select the order, and click 'Request Refund'. Fill out the form explaining the reason. Refunds are typically processed within 5-7 business days to your original payment method.",
+      "category": "refunds",
+      "language": "en"
+    },
+    {
+      "id": 6,
+      "question": "What is your refund policy?",
+      "answer": "We offer a 30-day money-back guarantee on most products. Items must be returned in original condition with tags attached. Digital products and customized items may have different policies.",
+      "category": "refunds",
+      "language": "en"
+    },
+    {
+      "id": 7,
+      "question": "How do I reset my password?",
+      "answer": "Click on 'Forgot Password' on the login page. Enter your email address, and we'll send you a secure link to reset your password. The link expires after 24 hours for security.",
+      "category": "account",
+      "language": "en"
+    },
+    {
+      "id": 8,
+      "question": "Can I delete my account?",
+      "answer": "Yes, you can delete your account from Account Settings > Privacy > Delete Account. Please note this action is permanent and will remove all your data, order history, and saved preferences.",
+      "category": "account",
+      "language": "en"
+    },
+    {
+      "id": 9,
+      "question": "What are the delivery times?",
+      "answer": "Standard delivery takes 3-5 business days. Express delivery is available for 1-2 business days. International orders typically arrive within 7-14 business days depending on customs processing.",
+      "category": "delivery",
+      "language": "en"
+    },
+    {
+      "id": 10,
+      "question": "Do you deliver internationally?",
+      "answer": "Yes, we ship to over 150 countries worldwide. Shipping costs and delivery times vary by destination. You can see exact rates at checkout by entering your address.",
+      "category": "delivery",
+      "language": "en"
+    },
+    {
+      "id": 11,
+      "question": "How do I contact customer support?",
+      "answer": "You can reach our support team 24/7 via live chat, email at support@samvaadai.com, or phone at 1-800-SAMVAAD. Average response time is under 2 hours.",
+      "category": "support",
+      "language": "en"
+    },
+    {
+      "id": 12,
+      "question": "What if I received a damaged item?",
+      "answer": "We apologize for any inconvenience. Please contact support immediately with photos of the damage. We'll arrange a replacement or full refund at no additional cost to you.",
+      "category": "support",
+      "language": "en"
+    },
+    {
+      "id": 13,
+      "question": "मैं अपने ऑर्डर को कैसे ट्रैक करूं?",
+      "answer": "आप अपने खाते में लॉग इन करके और 'मेरे ऑर्डर' अनुभाग पर जाकर अपने ऑर्डर को ट्रैक कर सकते हैं। जिस ऑर्डर को आप ट्रैक करना चाहते हैं उस पर क्लिक करें, और आपको इसकी स्थिति और अनुमानित डिलीवरी तिथि पर वास्तविक समय अपडेट दिखाई देगा।",
+      "category": "orders",
+      "language": "hi"
+    },
+    {
+      "id": 14,
+      "question": "आप कौन से भुगतान विधियां स्वीकार करते हैं?",
+      "answer": "हम सभी प्रमुख क्रेडिट कार्ड (वीज़ा, मास्टरकार्ड, अमेरिकन एक्सप्रेस), डेबिट कार्ड, पेपैल, गूगल पे, ऐप्पल पे और बैंक ट्रांसफर स्वीकार करते हैं। सभी लेनदेन 256-बिट एसएसएल एन्क्रिप्शन के साथ सुरक्षित हैं।",
+      "category": "payments",
+      "language": "hi"
+    },
+    {
+      "id": 15,
+      "question": "मैं रिफंड का अनुरोध कैसे करूं?",
+      "answer": "रिफंड का अनुरोध करने के लिए, 'मेरे ऑर्डर' पर जाएं, ऑर्डर चुनें, और 'रिफंड का अनुरोध करें' पर क्लिक करें। कारण बताते हुए फॉर्म भरें। रिफंड आमतौर पर 5-7 व्यावसायिक दिनों के भीतर आपकी मूल भुगतान विधि में प्रोसेस हो जाते हैं।",
+      "category": "refunds",
+      "language": "hi"
+    },
+    {
+      "id": 16,
+      "question": "¿Cómo puedo rastrear mi pedido?",
+      "answer": "Puede rastrear su pedido iniciando sesión en su cuenta y visitando la sección 'Mis Pedidos'. Haga clic en el pedido que desea rastrear y verá actualizaciones en tiempo real sobre su estado y fecha estimada de entrega.",
+      "category": "orders",
+      "language": "es"
+    },
+    {
+      "id": 17,
+      "question": "¿Qué métodos de pago aceptan?",
+      "answer": "Aceptamos todas las principales tarjetas de crédito (Visa, MasterCard, American Express), tarjetas de débito, PayPal, Google Pay, Apple Pay y transferencias bancarias. Todas las transacciones están protegidas con encriptación SSL de 256 bits.",
+      "category": "payments",
+      "language": "es"
+    },
+    {
+      "id": 18,
+      "question": "Comment puis-je suivre ma commande?",
+      "answer": "Vous pouvez suivre votre commande en vous connectant à votre compte et en visitant la section 'Mes Commandes'. Cliquez sur la commande que vous souhaitez suivre et vous verrez des mises à jour en temps réel sur son statut et sa date de livraison estimée.",
+      "category": "orders",
+      "language": "fr"
+    },
+    {
+      "id": 19,
+      "question": "Quels modes de paiement acceptez-vous?",
+      "answer": "Nous acceptons toutes les principales cartes de crédit (Visa, MasterCard, American Express), les cartes de débit, PayPal, Google Pay, Apple Pay et les virements bancaires. Toutes les transactions sont sécurisées avec un cryptage SSL 256 bits.",
+      "category": "payments",
+      "language": "fr"
+    },
+    {
+      "id": 20,
+      "question": "我如何追踪我的订单？",
+      "answer": "您可以通过登录您的帐户并访问\"我的订单\"部分来追踪您的订单。点击您要追踪的订单，您将看到有关其状态和预计交货日期的实时更新。",
+      "category": "orders",
+      "language": "zh"
+    },
+    {
+      "id": 21,
+      "question": "আমি কীভাবে আমার অর্ডার ট্র্যাক করব?",
+      "answer": "আপনি আপনার অ্যাকাউন্টে লগইন করে এবং 'আমার অর্ডার' বিভাগে গিয়ে আপনার অর্ডার ট্র্যাক করতে পারেন। আপনি যে অর্ডারটি ট্র্যাক করতে চান সেটিতে ক্লিক করুন এবং আপনি এর স্ট্যাটাস এবং আনুমানিক ডেলিভারি তারিখে রিয়েল-টাইম আপডেট দেখতে পাবেন।",
+      "category": "orders",
+      "language": "bn"
+    },
+    {
+      "id": 22,
+      "question": "আমি আমার অর্ডার দেওয়ার পরে সংশোধন করতে পারি?",
+      "answer": "যদি আপনার অর্ডার এখনও প্রক্রিয়া করা না হয়ে থাকে, আপনি এটি সংশোধন করতে পারেন। আপনার অ্যাকাউন্টে যান, অর্ডার খুঁজুন এবং 'অর্ডার সংশোধন করুন' এ ক্লিক করুন। একবার শিপিং শুরু হলে, সংশোধন আর সম্ভব নয়।",
+      "category": "orders",
+      "language": "bn"
+    },
+    {
+      "id": 23,
+      "question": "কোন পেমেন্ট পদ্ধতি গৃহীত হয়?",
+      "answer": "আমরা সমস্ত প্রধান ক্রেডিট কার্ড (Visa, MasterCard, American Express), ডেবিট কার্ড, PayPal, Google Pay, Apple Pay এবং ব্যাংক ট্রান্সফার গ্রহণ করি। সমস্ত লেনদেন 256-বিট SSL এনক্রিপশন দিয়ে সুরক্ষিত।",
+      "category": "payments",
+      "language": "bn"
+    },
+    {
+      "id": 24,
+      "question": "मी माझा ऑर्डर कसा ट्रॅक करू?",
+      "answer": "तुम्ही तुमच्या खात्यात लॉगिन करून आणि 'माझे ऑर्डर' विभागात जाऊन तुमचा ऑर्डर ट्रॅक करू शकता. तुम्हाला ट्रॅक करायचा असलेल्या ऑर्डरवर क्लिक करा आणि तुम्हाला त्याच्या स्थितीवर आणि अंदाजित वितरण तारखेवर रिअल-टाइम अपडेट दिसतील.",
+      "category": "orders",
+      "language": "mr"
+    },
+    {
+      "id": 25,
+      "question": "ऑर्डर दिल्यानंतर मी ते बदलू शकतो का?",
+      "answer": "जर तुमचा ऑर्डर अद्याप प्रक्रिया केला गेला नसेल तर तुम्ही तो बदलू शकता. तुमच्या खात्यात जा, ऑर्डर शोधा आणि 'ऑर्डर सुधारा' वर क्लिक करा. एकदा शिपिंग सुरू झाल्यावर, बदल शक्य नाहीत.",
+      "category": "orders",
+      "language": "mr"
+    },
+    {
+      "id": 26,
+      "question": "कोणत्या पेमेंट पद्धती स्वीकारल्या जातात?",
+      "answer": "आम्ही सर्व प्रमुख क्रेडिट कार्ड (Visa, MasterCard, American Express), डेबिट कार्ड, PayPal, Google Pay, Apple Pay आणि बँक ट्रान्सफर स्वीकारतो. सर्व व्यवहार 256-बिट SSL एन्क्रिप्शनसह सुरक्षित आहेत.",
+      "category": "payments",
+      "language": "mr"
+    }
+  ]
+}
+
