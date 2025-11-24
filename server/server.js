@@ -1,5 +1,8 @@
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '..', '.env') }); // Load environment variables FIRST
+// Only load .env file in development (local), not in production (Render)
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+}
 
 const express = require('express');
 const mongoose = require('mongoose');
